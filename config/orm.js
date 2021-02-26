@@ -17,7 +17,7 @@ var orm = {
     insertOne: function(burger_name, callback){
       db.query('INSERT INTO burgers SET ?', {
         burger_name: burger_name,
-        devoured: false,
+        devoured: 0,
       }, function (err, result) {
         if (err) throw err;
         callback(result);
@@ -27,7 +27,7 @@ var orm = {
   
     // updateOne()
     updateOne: function(burgerID, callback){
-      db.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {id: burgerID}], function (err, result) {
+      db.query('UPDATE burgers SET ? WHERE ?', [{devoured:1}, {id: burgerID}], function (err, result) {
           if (err) throw err;
           callback(result);
         });

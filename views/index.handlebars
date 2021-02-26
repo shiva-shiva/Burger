@@ -1,29 +1,38 @@
 
 <div class="row">
-    <div class="text-center">
-        <img src="../public/assets/img/Hamburger.gif" class="img-fluid" alt="burger">
-            <h1 class="headBurger">Eat da Burger</h1>
-    </div>
-</div>
-<div class="row">
- <div class="col-md-5">
-     {{#each burgers}}
-    <li class="list-group-item">
-       {{burger_name}}
-    </li>
-    {{/each}}
- </div>
-</div>
- <div class="row justify-content-md-center">
-    <div class="col-md-6"> 
-        <form  method="POST" action="/burger/create">
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Request new burger and place your order</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+  <center>
+    <div class="col-md-6">
+      <h4 class="red_font">Ready to eat!</h4>
+      <div id="ready_to_eat">
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="api/burger/eat/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control">{{burger_name}}</li>
+                <span class="input-group-btn">
+                  <button class="btn btn-success devour-button" type="submit">Devour It!</button>
+                </span>
             </div>
-            <div class="mb-3">
-                <button class="btn btn-primary" type="submit" disabled>Place Order</button>
-            </div>
-        </form>
+          </form>
+          {{/unless}}
+        {{/each}}
+      </div>
     </div>
- </div>
+
+    <div class="col-md-6">
+      <h4 class="red_font">Already eaten!</h4>
+      <div id="already_eaten">
+        {{#each burgers}}
+          {{#if devoured}}
+            <div class="input-group">
+              <li class="form-control">{{burger_name}}</li>
+              <span class="input-group-btn">
+                <button class="btn btn-info whine-button" type="button">🍔</button>
+              </span>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </center>
+</div>

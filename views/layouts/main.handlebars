@@ -12,7 +12,29 @@
 </head>
 <body>
     <div class="container">
+        <div class="row">
+        <div class="text-center">
+        <img src="../public/assets/img/Hamburger.gif" class="img-fluid" alt="burger">
+        <h1 class="headBurger">Eat da Burger</h1>
+        </div>
+        </div>
+        <br>
         {{{ body }}}
+
+       <br><br>
+       <form action="api/burger/create" method="POST"> 
+        <div class="row">
+          <div class="col-md-3"></div> 
+          <div class="form-group col-md-6">
+            <center><label for="new_burger" class="red_font">Request a new burger and place your order!</label></center>
+            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
+          </div>
+          <div class="col-md-3"></div> 
+        </div>
+        <center>
+          <button id="submit-button" type="submit" class="btn btn-danger">Place Order</button>
+        </center>
+      </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
