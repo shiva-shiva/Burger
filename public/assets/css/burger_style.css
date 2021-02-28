@@ -1,3 +1,41 @@
+body{
+   background-color:#92e3a9 ;
+}
+
 .headBurger{
     font-family: 'Kaushan Script', cursive;
+    padding-bottom:20px;
+    border-bottom: 6px dotted rgb(0, 0, 0);
+}
+
+.red_font{
+    margin-top:20px;
+    font-family: 'Kaushan Script', cursive;
+    padding-bottom:10px;
+}
+
+
+.btn-primary {
+    margin:30px;
+    color: #fff;
+    background-color: #8d3836;
+    border-color: #8d3836;
+}
+#eaten{
+    margin-top:20px;
+}
+.form-control{
+    font-style: italic;
+    font-weight: bolder !important;
+    margin-right:20px;
+    margin-left:40px;
+}
+
+.devour-button{
+    background-color: #8d3836;
+    border-color: #8d3836;
+}
+.already-eaten{
+    background-color: #8d3836;
+    border-color: #8d3836;
 }

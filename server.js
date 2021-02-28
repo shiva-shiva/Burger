@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override')
 
 const app = express()
 const PORT = process.env.PORT || 3000;
@@ -10,9 +11,9 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.use(express.static(__dirname));
 app.set("view engine", "handlebars");
-
+app.use(methodOverride('_method'));
 app.use(express.static(process.cwd() + '/public'));
-app.use(express.static("public"));
+//app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 

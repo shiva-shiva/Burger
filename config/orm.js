@@ -15,24 +15,24 @@ var orm = {
   
     // insertOne()
     insertOne: function(burger_name, callback){
-      db.query('INSERT INTO burgers SET ?', {
-        burger_name: burger_name,
-        devoured: 0,
-      }, function (err, result) {
+      const insertQuery =`INSERT INTO burgers ( burger_name, devoured) VALUES('${burger_name}',false)`
+      db.query(insertQuery, function (err, result) {
         if (err) throw err;
         callback(result);
       });
   
     },
-  
+
     // updateOne()
     updateOne: function(burgerID, callback){
-      db.query('UPDATE burgers SET ? WHERE ?', [{devoured:1}, {id: burgerID}], function (err, result) {
-          if (err) throw err;
-          callback(result);
-        });
-  
-    }
+    const updateQuery = `UPDATE burgers SET devoured= true WHERE id = ${burgerID}`
+    // Run MySQL Query
+    db.query(updateQuery , function (err, result) {
+        if (err) throw err;
+        callback(result);
+      });
+
+  }
   
   };
   
