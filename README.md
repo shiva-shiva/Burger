@@ -13,10 +13,15 @@ A Node, Express, Handlebars, and MySQL burger app that lets users input the name
 ![Demo](./public/assets/img/burger.png)
 
  ## Table of Contents
+* [How the app works](#Description)
 * [Description](#Description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [license](#license)
+
+
+## How the app works
+This project is a full stack application that allows you to place an order for a burger. When you place an order, the burger you enter in the form field is added to the list of burgers on the left side of the screen. Each burger in the list has a Devour me button. Clicking this button moves the burger from the list on the left side of the screen to the list on the right. The list on the right is a list of burgers that have already been devoured. Each burger in this list has a Throw away button that allows you to remove the burger, which deletes the burger from the user interface as well as from the MySQL database.
 
 ## Installation
 *Steps required to install project and how to get the development environment running:*
