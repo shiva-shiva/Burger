@@ -13,8 +13,9 @@ A Node, Express, Handlebars, and MySQL burger app that lets users input the name
 ![Demo](./public/assets/img/burger.png)
 
  ## Table of Contents
-* [How the app works](#Description)
+
 * [Description](#Description)
+* [How the app works](#Description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [license](#license)
