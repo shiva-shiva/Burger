@@ -6,7 +6,7 @@
 
 
 ## Description 
-A Node, Express, Handlebars, and MySQL burger app that lets users input the names of burgers they'd like to eat... and then devour them! Please check out the launched app on Heroku [here](https://)!
+A Node, Express, Handlebars, and MySQL burger app that lets users input the names of burgers they'd like to eat... and then devour them! Please check out the launched app on Heroku [here](https://afternoon-oasis-27732.herokuapp.com/)!
 
 ## ✨Demo
 

@@ -1,1 +1,1 @@
-INSERT INTO `burgers` VALUES ('1','Big Mac','0'),('2','Double Big Mac','0'),('3','Cheeseburger','1');
+INSERT INTO `burgers` VALUES ('1','Big Mac',false),('2','Double Big Mac',false),('3','Cheeseburger',true);
