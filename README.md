@@ -23,7 +23,10 @@ A Node, Express, Handlebars, and MySQL burger app that lets users input the name
 
     1-Download or clone this repository into your local computer.
     2-npm init
-    
+    3-Install the dependencies
+    4-Install MySQL Workbench
+    5-Set up a development database
+
 
 ## 💻usage
 *Instructions and examples for use:*</br> 
